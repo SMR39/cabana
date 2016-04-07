@@ -1,0 +1,6 @@
+kibana:
+  build: kibana/
+  volumes:
+    - ./kibana/config/:/opt/kibana/config/
+  ports:
+    - "5601:5601"

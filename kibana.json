@@ -1,0 +1,19 @@
+{
+  "id": "kibana",
+  "cmd": "logstash -f /mnt/mesos/sandbox/kibana.conf",
+  "cpus": 0.4,
+  "mem": 512,
+  "ports":[5601],
+  "requirePorts":true,
+  "instances": 1,
+  "uris": [
+        "https://gist.githubusercontent.com/SMR39/efc288663949a47277bc/raw/514b03f21f136cd133a6664e88efe98ada39e804/logstash.conf"
+    ],
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "kibana:latest",
+      "network": "HOST"
+    }
+  }
+}
